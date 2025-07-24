@@ -1,0 +1,20 @@
+aws_region   = "us-east-1"
+project_name = "my-3tier-app"
+
+vpc_cidr = "10.0.0.0/16"
+public_subnet_cidrs  = ["10.0.1.0/24", "10.0.2.0/24"]
+private_subnet_cidrs = ["10.0.10.0/24", "10.0.20.0/24"]
+
+app_image = "your-account.dkr.ecr.us-east-1.amazonaws.com/my-app:latest"
+app_port  = 3000
+
+db_name     = "appdb"
+db_username = "admin"
+rds_password = "your-secure-password"
+
+tags = {
+  Project     = "3TierECSApp"
+  Environment = "dev"
+  ManagedBy   = "Terraform"
+  Owner       = "DevOps Team"
+}
